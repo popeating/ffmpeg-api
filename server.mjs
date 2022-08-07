@@ -16,7 +16,7 @@ async function getFFmpeg() {
   return ffmpegInstance;
 }
 const app = express();
-const port = 3200;
+const port = process.env.PORT || 3200;
 
 const upload = multer({
   storage: multer.memoryStorage(),
